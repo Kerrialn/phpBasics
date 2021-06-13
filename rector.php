@@ -13,6 +13,8 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
     $parameters->set(Option::AUTO_IMPORT_NAMES, true);
 
+    $parameters->set(Option::PATHS, [__DIR__ . '/src']);
+
     $containerConfigurator->import(SetList::PHP_74);
     $containerConfigurator->import(SetList::PHP_80);
     $containerConfigurator->import(SetList::DEAD_CODE);
